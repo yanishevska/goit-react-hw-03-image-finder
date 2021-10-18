@@ -37,13 +37,12 @@ class ImageGallery extends Component {
               images: [...prevState.images, ...images],
               status:'resolved',  
             }))
-            console.log(currentPage);
+     
             if (prevState.images !== images) {
               this.scrollSmooth();  
             }
             })
             .catch(error => {
-              console.log(error);
               this.setState({status:'rejected'})
             })
     }
